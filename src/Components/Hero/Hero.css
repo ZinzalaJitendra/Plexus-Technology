@@ -1,0 +1,18 @@
+.bg-hero {
+  background-color: #ebf1fa;
+  height: 550px;
+}
+.bg-hero .hero-size {
+  height: 500px;
+  width: 500px;
+}
+@media (max-width: 600px) and (max-width: 600px) {
+  .bg-hero .hero-title {
+    font-size: 35px;
+  }
+}
+@media (max-width: 400px) {
+  .bg-hero .hero-title {
+    font-size: 20px;
+  }
+}/*# sourceMappingURL=Hero.css.map */
