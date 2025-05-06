@@ -6,6 +6,7 @@ import Hero from './Components/Hero/Hero';
 import Card from './Components/Card/Card';
 import Stack from './Components/Stack/Stack';
 import Contact from './Components/TouchComp/Contact';
+import Footer from './Components/Footer/Footer';
 function App() {
 
     return(
@@ -15,6 +16,7 @@ function App() {
         <Card />
         <Stack />
         <Contact></Contact>
+        <Footer></Footer>
       </>
     )
 }
