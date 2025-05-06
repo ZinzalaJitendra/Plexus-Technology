@@ -16,35 +16,15 @@
     position: relative;
   }
 
-  // Animation for image groups
-  .image-group {
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-  }
-
-  // Group 1: Hero image, lol, prankster (will scale from 1 to 0)
-  .group1 {
-    animation-name: scaleOut;
-    opacity: 1;  // Initially visible
-  }
-
-  // Group 2: Game1, Game2 (will scale from 0 to 1)
-  .group2 {
-    animation-name: scaleIn;
-    opacity: 0;  // Initially invisible
-  }
-
-  // Icon styles
   .lol_setup, .prankster-setup, .game1_setup, .game2-setup {
-    animation: zoomTwice 4s ease-in-out infinite;
+    animation: zoomTwice 5s linear infinite;
   }
 
   .lol_setup {
     height: 74px;
     width: 74px;
-    top: 75px;
-    left: 35px;
+    top: 90px;
+    left: 40px;
   }
 
   .prankster-setup {
@@ -64,8 +44,8 @@
   .game2-setup {
     height: 85px;
     width: 85px;
-    bottom: 75px;
-    right: 58px;
+    bottom: 70px;
+    right: 55px;
   }
 
   // Animation for smooth zooming of icons
@@ -73,15 +53,35 @@
     0%, 100% {
       transform: scale(1);
     }
-    25% {
-      transform: scale(1.1);
+    20% {
+      transform: scale(1.15);
     }
-    50% {
+    40% {
+      transform: scale(0.9);
+    }
+    60% {
+      transform: scale(1.2);
+    }
+    80% {
       transform: scale(0.95);
     }
-    75% {
-      transform: scale(1.05);
-    }
+  }
+  
+  // Group 1: Hero image, lol, prankster
+  .group1 {
+    // animation: scaleOut;
+    opacity: 1;
+    animation: scaleIn 10s linear 2s infinite normal;
+  }
+
+  // Group 2: Game1, Game2
+  .group2 {
+    animation: scaleOut 10s linear 2s infinite normal;
+    // animation-name: scaleIn;
+    opacity: 0;
+    // animation-duration: 8s;
+    // animation-iteration-count: infinite;
+    // animation-timing-function: ease-in-out;
   }
 
   // Group 1 Animation: Scale from 1 to 0 with opacity transition
@@ -91,9 +91,14 @@
       transform: scale(1);
       z-index: 2;
     }
-    50%, 100% {
+    50%, 90% {
       opacity: 0;
       transform: scale(0);
+      z-index: 1;
+    }
+    100%{
+      opacity: 1;
+      transform: scale(1);
       z-index: 1;
     }
   }
@@ -111,7 +116,7 @@
       z-index: 2;
     }
     100% {
-      opacity: 0;
+      opacity: 1;
       transform: scale(0);
       z-index: 1;
     }
@@ -143,29 +148,29 @@
     }
   }
 
-  @media (max-width: 392px) {
-    .hero-size {
+  @media (max-width: 600px) {
+    .hero-size{
       height: 300px;
       width: 300px;
     }
 
-    .lol_setup {
+    .lol_setup{
       top: 15px;
       left: 15px;
     }
 
-    .prankster-setup {
+    .prankster-setup{
       bottom: 15px;
       right: 18px;
     }
 
-    .game1_setup {
-      top: 25px;
+    .game1_setup{
+      top: 35px;
       left: 15px;
     }
 
-    .game2-setup {
-      bottom: 18px;
+    .game2-setup{
+      bottom: 135px;
       right: 25px;
     }
   }

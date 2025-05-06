@@ -1,0 +1,53 @@
+.container .row .stack-container {
+  height: 550px;
+  width: 350px;
+}
+.container .row .group1 {
+  opacity: 1;
+  animation: scaleIn 10s linear 2s infinite normal;
+}
+.container .row .group2 {
+  animation: scaleOut 10s linear 2s infinite normal;
+  opacity: 0;
+}
+@keyframes scaleOut {
+  0%, 40% {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+  }
+  50%, 90% {
+    opacity: 0;
+    transform: scale(0);
+    z-index: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1;
+  }
+}
+@keyframes scaleIn {
+  0%, 40% {
+    opacity: 0;
+    transform: scale(0);
+    z-index: 1;
+  }
+  50%, 90% {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0);
+    z-index: 1;
+  }
+}
+.container .stack-box {
+  height: 80px;
+  width: 80px;
+}
+.container .stack-box img {
+  width: 35px;
+}/*# sourceMappingURL=Stack.css.map */
