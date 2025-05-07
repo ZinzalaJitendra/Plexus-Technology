@@ -1,13 +1,14 @@
 import React from "react";
 import logo from "../../assets/logo.svg";
+import { Link, NavLink } from "react-router";
 
 function Header() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-white p-3">
       <div className="container">
-        <a className="navbar-brand" href="#">
+        <NavLink className={({isActive}) => isActive ? "navbar-brand active" : "navbar-brand"} to="/">
           <img src={logo} className="img-fluid" style={{width : "180px"}} alt="Plexus Logo" />
-        </a>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -22,34 +23,34 @@ function Header() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item px-2">
-              <a className="nav-link active" aria-current="page" href="#">
+              <NavLink className={({isActive}) => isActive ? "nav-link active" : "nav-link"} aria-current="page" to="/">
                 Home
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item px-2 ms-3">
-              <a className="nav-link" href="#">
+              <NavLink className={({isActive}) => isActive ? "nav-link active" : "nav-link"} to="/about">
                 About us
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item px-2 ms-3">
-              <a className="nav-link" href="#">
+              <NavLink className={({isActive}) => isActive ? "nav-link active" : "nav-link"} to="/portfolio">
                 Portfolio
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item px-2 ms-3">
-              <a className="nav-link" href="#">
+              <NavLink className={({isActive}) => isActive ? "nav-link active" : "nav-link"} to="/culture">
                 Culture
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item px-2 ms-3">
-              <a className="nav-link" href="#">
+              <NavLink className={({isActive}) => isActive ? "nav-link active" : "nav-link"} to="/hiring">
                 Hiring
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item px-2 ms-3">
-              <a className="nav-link" href="#">
+              <NavLink className={({isActive}) => isActive ? "nav-link active" : "nav-link"} to="/contact">
                 Contact us
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

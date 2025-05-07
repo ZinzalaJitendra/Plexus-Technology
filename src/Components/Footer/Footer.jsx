@@ -6,13 +6,14 @@ import {
   faWhatsapp,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import "./Footer.scss"
 
 function Footer() {
   return (
     <section className="bg-white mt-5">
       <div className="container">
         <div className="row">
-          <div className="col-md-12 col-lg-4 col-12 mb-5">
+          <div className="col-md-12 col-lg-4 col-12 mb-5 p-0">
             <h4 className="text-center fw-semibold">Plexus Technology</h4>
             <p className="text-center">
               345, A.R Mall, opp. panvel point, mota varachha, 394101
@@ -25,7 +26,7 @@ function Footer() {
               hr.plexustechnology@gmail.com
             </p>
           </div>
-          <div className="col-md-12 col-lg-4 col-12 mb-5">
+          <div className="col-md-12 col-lg-4 col-12 mb-5 p-0">
             <h4 className="text-center fw-semibold">Quick Links</h4>
             <p className="text-center">Quick Links</p>
             <p className="text-center">About us</p>
@@ -41,29 +42,30 @@ function Footer() {
             />
             <p className="text-center mt-3">Follow Us</p>
             <div className="d-flex justify-content-between">
-              <div className="rounded-circle p-3 me-3 d-flex justify-content-center align-items-center" style={{backgroundColor : "#0777ab"}}>
+              <div className="rounded-circle footer-icon1 me-3 d-flex justify-content-center align-items-center">
+                {/* <img width="50" height="50" style={{backgroundColor : "white"}} src="https://img.icons8.com/ios/50/linkedin.png" alt="linkedin"/> */}
                 <FontAwesomeIcon
                   icon={faLinkedin}
-                  style={{ color: "white", fontSize: "26px" }}
+                  className="icon1"
                 />
               </div>
-              <div className="rounded-circle p-3 me-3 d-flex justify-content-center align-items-center" style={{backgroundColor : "#25d366"}}>
+              <div className="rounded-circle footer-icon2 me-3 d-flex justify-content-center align-items-center">
                 <FontAwesomeIcon
                   icon={faWhatsapp}
-                  style={{ color: "white", fontSize: "26px" }}
+                  className="icon2"
                 />
               </div>
-              <div className="rounded-circle p-3 bg-info d-flex justify-content-center align-items-center" style={{ background: "linear-gradient(90deg, #cd0076, #df0041)" }}>
+              <div className="rounded-circle footer-icon3 bg-info d-flex justify-content-center align-items-center">
                 <FontAwesomeIcon
                   icon={faInstagram}
-                  style={{ color: "white", fontSize: "26px" }}
+                  className="icon3"
                 />
               </div>
             </div>
           </div>
         </div>
-        <p className="divider border w-100"></p>
-        <div className="d-flex justify-content-end">
+        <p className="divider border mt-3 w-100"></p>
+        <div className="d-flex justify-content-center text-center justify-content-sm-end">
             <p className="">All rights Reserved. © Plexus Technology</p>
         </div>
       </div>

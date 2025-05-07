@@ -1,0 +1,87 @@
+.container{
+    .footer-icon1{
+        background-color: #0777ab;
+        width: 50px;
+        height: 50px;
+        &:hover{
+            border: 2px solid #0777ab;
+            background-color:white ;
+            .icon1{
+                color: #0777ab;
+                animation: RotateClockwise 0.3s ease-in-out forwards;
+            }
+        }
+        &:not(:hover) {
+            .icon1 {
+                animation: AntiClockwise 0.3s ease-in-out forwards;
+            }
+        }
+        .icon1{
+            color: white;
+            font-size: 26px;
+        }
+    }
+
+    .footer-icon2{
+        background-color: #25d366 ;
+        width: 50px;
+        height: 50px;
+        &:hover{
+            border : 2px solid #25d366;
+            background-color: white;
+            .icon2{
+                color: #25d366;
+                animation: RotateClockwise 0.3s ease-in-out forwards;
+            }
+        }
+        &:not(:hover){
+            .icon2{
+                animation : AntiClockwise 0.3s ease-in-out forwards;
+            }
+        }
+        .icon2{
+            color: white;
+            font-size: 26px;
+        }
+    }
+    .footer-icon3{
+        background: linear-gradient(90deg, #cd0076, #df0041);
+        width: 50px;
+        height: 50px;
+        &:hover{
+            border: 2px solid #cd0076;
+            background: linear-gradient(#ffff);
+            .icon3{
+                animation : RotateClockwise 0.3s ease-in-out forwards;
+                color: #cd0076;
+            }
+        }
+        &:not(:hover){
+            .icon3{
+                animation : AntiClockwise 0.3s ease-in-out forwards;
+            }
+        }
+        .icon3{
+            color: white;
+            font-size: 26px;
+        }
+    }
+
+    @keyframes RotateClockwise {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes AntiClockwise {
+        from {
+            transform: rotate(360deg);
+        }
+        to {
+            transform: rotate(0deg);
+        }
+    }
+}

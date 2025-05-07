@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     font-family: Poppins, sans-serif;
       font-style: normal;
@@ -6,3 +7,40 @@
 .hero-title{
     font-size: 50px;
 }
+.active{
+    color: #0777ab !important;
+}
+.about-bg {
+    height: 40vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./assets/about-bg.png");
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    font-size: 50px;
+}
+.about-design {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+.portfolio-bg {
+    height: 40vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./assets/portfolio-bg.jpg");
+    background-size: cover;
+    background-position: 10% 10%;
+    background-repeat: no-repeat;
+    font-size: 50px;
+}
+.hiring-bg{
+    height: 40vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./assets/apply-bg.png");
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+// <h1 class="hero-title w-100 h-100 m-0 text-center text-white" style=";line-height: 280px;color: rgb(19, 32, 40);font-weight: 600;">About Us</h1>

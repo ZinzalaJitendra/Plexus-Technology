@@ -1,10 +1,16 @@
 import React from 'react'
-import Header from '../../Components/Header/Header'
+import Hero from '../../Components/Hero/Hero'
+import Card from '../../Components/Card/Card'
+import Stack from '../../Components/Stack/Stack'
+import Contact from '../../Components/TouchComp/Contact'
 
 function Home() {
   return (
     <>
-       <Header /> 
+      <Hero />
+      <Card></Card>
+      <Stack></Stack>
+      <Contact></Contact>
     </>
   )
 }
