@@ -4,7 +4,7 @@ import HeaderComp from '../../Components/HeaderComp/HeaderComp'
 function Portfolio() {
   return (
     <>
-      <HeaderComp title="Portfolio" bgImg="portfolio-bg"></HeaderComp>
+      <HeaderComp title="Portfolio" bgImg="portfolio-bg text-white"></HeaderComp>
     </>
   )
 }

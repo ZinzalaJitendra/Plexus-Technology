@@ -7,7 +7,7 @@ import Journay from '../../Components/Journay/Journay'
 function AboutUs() {
   return (
     <>
-      <HeaderComp title="About Us" bgImg="about-bg" />
+      <HeaderComp title="About Us" bgImg="about-bg text-white" />
       <AboutComp />
       <AboutCard />
       <Journay />

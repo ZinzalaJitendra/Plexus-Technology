@@ -10,7 +10,7 @@ import "./Footer.scss"
 
 function Footer() {
   return (
-    <section className="bg-white mt-5">
+    <section className="bg-white" style={{marginTop : "100px"}}>
       <div className="container">
         <div className="row">
           <div className="col-md-12 col-lg-4 col-12 mb-5 p-0">

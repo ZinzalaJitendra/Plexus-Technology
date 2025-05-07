@@ -3,7 +3,7 @@ import "./Contact.scss";
 
 function Contact() {
   return (
-    <div className="mx-3 bg-blue py-4 my-3 rounded-5">
+    <div className="mx-3 bg-blue py-4 my-5 rounded-5">
       <h2 className="fw-bold text-white text-center">Let's Get in Touch</h2>
       <div className="container">
         <div className="row d-flex justify-content-cente
