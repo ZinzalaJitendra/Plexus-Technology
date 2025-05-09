@@ -1,5 +1,5 @@
 import React from 'react'
-import { members } from './CultureComp'
+import { members } from './Culturedata';
 import './CultureComp.scss'
 
 function CultureComp() {
@@ -31,7 +31,7 @@ function CultureComp() {
             </div>
             <div className="image-column scroll-up">
               {col3.map((img, index) => (
-                <img key={index} height="150px" width="100px" src={img} alt="culture" className="img-fluid mb-3 rounded" />
+                <img key={index} height="150px" width="100px" src={img} alt="culture" className="img-fluid mb-3 rounded"/>
               ))}
             </div>
           </div>
