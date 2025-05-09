@@ -1,0 +1,44 @@
+.culture-slider {
+    overflow: hidden;
+    height: 400px;
+    display: flex;
+    gap: 10px;
+  
+    .image-column {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  
+      img {
+        width: 100%;
+        border-radius: 8px;
+      }
+  
+      &.scroll-up {
+        animation: scroll-up 10s linear infinite;
+      }
+  
+      &.scroll-down {
+        animation: scroll-down 10s linear infinite;
+      }
+    }
+  }
+  
+  @keyframes scroll-up {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  @keyframes scroll-down {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  
