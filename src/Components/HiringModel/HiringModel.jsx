@@ -11,10 +11,10 @@ function HiringModel() {
         <p className="text-center">Hiring</p>
         <h1 className="text-center fw-bold">"Spark Your Passion"</h1>
       </div>
-      <div className="bg-light rounded-3 py-5 px-4">
-        <h4 className="text-center">Open Position</h4>
+      <div className="bg-light shadow-sm border rounded-4 py-5 px-5">
+        <h2 className="text-center pt-5">Open Position</h2>
         <div className="row py-5">
-          <div className="col-md-5 col-12">
+          <div className="col-lg-5 col-12">
             <form className="d-flex align-items-center" role="search">
               <input
                 className="form-control border border-2 me-2 py-2 rounded-pill"
@@ -103,7 +103,7 @@ function HiringModel() {
               </div>
             </div>
           </div>
-          <div className="col-md-7 col-12">
+          <div className="col-lg-7 mt-lg-0 mt-5 col-12">
             <p className="fs-4 fw-semibold">IOS Department</p>
             <div className="bg-white rounded-3 py-4 px-3">
               <p>IOS Department</p>
@@ -116,17 +116,17 @@ function HiringModel() {
                     src="https://img.icons8.com/ios-glyphs/30/marker--v1.png"
                     alt="marker--v1"
                   />
-                  <span className="ms-2">Surat</span>
+                  <span className="ms-2" style={{fontSize : "14px"}}>Surat</span>
                 </div>
                 <div className="d-inline-flex align-ites-center border p-2 rounded-3 mx-0 mx-sm-3 my-3 pointer-cursor">
                   <img
                     width="20"
                     height="20"
-                    className="img-fluid"
+                    className="img-fluid bg-light"
                     src="https://img.icons8.com/fluency-systems-filled/48/name-tag-woman-horizontal.png"
                     alt="name-tag-woman-horizontal"
                   />
-                  <span className="ms-2">Office work</span>
+                  <span className="ms-2" style={{fontSize : "14px"}}>Office work</span>
                 </div>
                 <div className="d-inline-flex align-ites-center border p-2 rounded-3  pointer-cursor">
                   <img
@@ -136,7 +136,7 @@ function HiringModel() {
                     src="https://img.icons8.com/fluency-systems-filled/48/user-tag.png"
                     alt="user-tag"
                   />
-                  <span className="ms-2">1 year</span>
+                  <span className="ms-2" style={{fontSize : "14px"}}>1 year</span>
                 </div>
               </div>
             </div>

@@ -1,0 +1,35 @@
+.container{
+    .blue-box{
+        // position: static;
+        background-color: #0777ab;
+        padding: 25px 0px;
+        .container{
+            .row{
+                background-color: #fff6;
+                border-radius: 20px;
+                color: #f6f6f6 !important;
+                font-weight: 200 !important;
+                padding: 25px 20px;
+                margin: 25px 0px;
+            }
+        }
+    }
+
+    @media (min-width : 1140px) {
+        position: relative;
+        .contact-modal{
+            max-width: 80%;
+            form{
+                max-width: 70%;
+            }
+        }
+        .blue-box{
+            background-color: #0777ab;
+            font-weight: 400;
+            position: absolute;
+            top: 2.5rem;
+            right: 1.5rem;
+            max-width: 400px;
+        }
+    }
+}
