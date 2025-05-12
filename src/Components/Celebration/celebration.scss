@@ -1,0 +1,127 @@
+.slider-container-culture {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+}
+
+.slider-content-culture {
+    display: flex;
+    animation: scrollculture 20s linear infinite;
+    min-width: fit-content;
+}
+
+@keyframes scrollculture {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.slider-container-culture:hover .slider-content-culture {
+    animation-play-state: paused;
+}
+
+
+@keyframes scrollculture {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+.slider-container-culture4 {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    cursor: pointer;
+}
+
+.slider-content-culture4 {
+    display: inline-flex;
+    animation: scrollculture4 10s linear infinite;
+    width: 600px;
+}
+
+.slider-container-culture4:hover .slider-content-culture4 {
+    animation-play-state: paused;
+}
+
+@keyframes scrollculture4 {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.slider-container-culture2 {
+    overflow: hidden;
+    position: relative;
+    height: 650px;
+    cursor: pointer;
+}
+
+.slider-content-culture2 {
+    display: flex;
+    flex-direction: column;
+    animation: scrollculture2 50s linear infinite;
+}
+
+.slider-container-culture2:hover .slider-content-culture2 {
+    animation-play-state: paused;
+}
+
+@keyframes scrollculture2 {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%); /* Move up */
+    }
+}
+
+.slider-container-culture3 {
+    overflow: hidden;
+    position: relative;
+    height: 650px; /* Adjust height as needed */
+    cursor: pointer;
+}
+
+.slider-content-culture3 {
+    display: flex;
+    flex-direction: column;
+    animation: scrollculture3 50s linear infinite;
+}
+
+.slider-container-culture3:hover .slider-content-culture3 {
+    animation-play-state: paused;
+}
+
+@keyframes scrollculture3 {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0); /* Move up */
+    }
+}
+
+
+.custom-height {
+    height: 650px; /* Default height for smaller screens */
+}
+
+@media (max-width: 992px) {  /* lg and above */
+    .custom-height {
+        height: auto;
+    }
+}
