@@ -7,6 +7,7 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import "./Footer.scss"
+import { NavLink } from "react-router";
 
 function Footer() {
   return (
@@ -26,12 +27,12 @@ function Footer() {
               hr.plexustechnology@gmail.com
             </p>
           </div>
-          <div className="col-md-12 col-lg-4 col-12 mb-5 p-0">
+          <div className="col-md-12 col-lg-4 col-12 mb-5 p-0 d-flex flex-column justify-content-between">
             <h4 className="text-center fw-semibold">Quick Links</h4>
-            <p className="text-center">Quick Links</p>
-            <p className="text-center">About us</p>
-            <p className="text-center">Company Culture</p>
-            <p className="text-center">Contact us</p>
+            <NavLink to="/" className="text-center link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" style={{fontWeight : "400"}}>Quick Links</NavLink>
+            <NavLink to="/about" className="text-center link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" style={{fontWeight : "400"}}>About us</NavLink>
+            <NavLink to="/culture" className="text-center link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" style={{fontWeight : "400"}}>Company Culture</NavLink>
+            <NavLink to="/contact" className="text-center link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" style={{fontWeight : "400"}}>Contact us</NavLink>
           </div>
           <div className="col-md-12 col-lg-4 col-12 d-flex flex-column align-items-center">
             <img

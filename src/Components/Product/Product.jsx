@@ -12,8 +12,8 @@ const ProductCard = ({ product }) => {
         {/* Images Section */}
         <div
           className={`${
-            isLOL ? "order-1 order-md-1" : "order-first order-md-2"
-          } col-12 col-md-6 overflow-hidden`}
+            isLOL ? "order-1 order-lg-1" : "order-first order-lg-2"
+          } col-12 col-lg-6 overflow-hidden overflow-lg-visible`}
         >
           <div className={`${isLOL ? "lol-rotate" : "portfolio-container1"}`}>
             <div className="row h-100">
@@ -51,8 +51,8 @@ const ProductCard = ({ product }) => {
         {/* Text Content Section */}
         <div
           className={`${
-            isLOL ? "order-2 order-md-2" : "order-md-1"
-          } col-12 col-md-6 py-5 px-3 px-sm-5`}
+            isLOL ? "order-2 order-lg-2" : "order-lg-1"
+          } col-12 col-lg-6 py-5 px-3 px-sm-5 overflow-hidden overflow-lg-visible`}
         >
           <div className="d-flex align-items-center">
             <img
