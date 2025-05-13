@@ -13,12 +13,12 @@ const ProductCard = ({ product }) => {
         <div
           className={`${
             isLOL ? "order-1 order-lg-1" : "order-first order-lg-2"
-          } col-12 col-lg-6 overflow-hidden overflow-lg-visible`}
+          } col-12 col-lg-6 product-container`}
         >
           <div className={`${isLOL ? "lol-rotate" : "portfolio-container1"}`}>
             <div className="row h-100">
               {[0, 2, 4].map((startIndex, colIndex) => (
-                <div className={`col-4 animation-column h-100`} key={colIndex}>
+                <div className={`${isLOL ? "col-4 animation-column lol-setup h-100" : "col-4 animation-column column-setup h-100"}`} key={colIndex}>
                   <div className="slider-container">
                     <div
                       className={`slider-content ${

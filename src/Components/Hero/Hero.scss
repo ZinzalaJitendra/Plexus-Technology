@@ -1,7 +1,26 @@
 .bg-hero {
   background-color: #ebf1fa;
   border: 1px solid rgba(238, 238, 238);
-  overflow: hidden;
+
+  .developer{
+    position: absolute;
+    width: 160px;
+    top: 350px;
+    left: 280px;
+    animation: translateYInfinite 3s infinite;
+  }
+  .designer{
+    position: absolute;
+    width: 160px;
+    top: 430px;
+    right: 700px;
+    animation: RotateInfinite 6s infinite;
+  }
+
+  .hero-circle{
+    height: 550px;
+    width: 550px;
+  }
 
   .hero-size {
     height: 500px;
@@ -10,10 +29,6 @@
 
   .hero-title {
     max-width: 650px;
-  }
-
-  .hero-circle {
-    position: relative;
   }
 
   .lol_setup, .prankster-setup, .game1_setup, .game2-setup {
@@ -44,9 +59,16 @@
   .game2-setup {
     height: 85px;
     width: 85px;
-    bottom: 70px;
+    bottom: 50px;
     right: 55px;
   }
+
+  .group1 img:first-child,
+  .group2 img:first-child {
+  width: 100%;
+  height: 95%;
+  object-fit: contain;
+}
 
   // Animation for smooth zooming of icons
   @keyframes zoomTwice {
@@ -69,68 +91,91 @@
   
   // Group 1: Hero image, lol, prankster
   .group1 {
-    // animation: scaleOut;
+    animation: scaleIn 10s linear infinite;
+    transform: scale(1);
     opacity: 1;
-    animation: scaleIn 10s linear 2s infinite normal;
+    animation-delay: 4s;
   }
 
   // Group 2: Game1, Game2
   .group2 {
-    animation: scaleOut 10s linear 2s infinite normal;
-    // animation-name: scaleIn;
+    transform: scale(0);
     opacity: 0;
-    // animation-duration: 8s;
-    // animation-iteration-count: infinite;
-    // animation-timing-function: ease-in-out;
+    animation: scaleOut 10s linear infinite;
+    animation-delay: 4s;
   }
 
   // Group 1 Animation: Scale from 1 to 0 with opacity transition
   @keyframes scaleOut {
-    0%, 40% {
-      opacity: 1;
-      transform: scale(1);
-      z-index: 2;
+   0% {
+        transform: scale(1);
+        opacity: 1;
     }
-    50%, 90% {
-      opacity: 0;
-      transform: scale(0);
-      z-index: 1;
+
+    30% {
+        transform: scale(1);
+        opacity: 1;
     }
-    100%{
-      opacity: 1;
-      transform: scale(1);
-      z-index: 1;
+
+    40%,
+    90% {
+        transform: scale(0);
+        opacity: 0;
     }
   }
 
   // Group 2 Animation: Scale from 0 to 1 with opacity transition
   @keyframes scaleIn {
-    0%, 40% {
-      opacity: 0;
-      transform: scale(0);
-      z-index: 1;
+    90%,
+    0% {
+        transform: scale(0);
+        opacity: 0;
     }
-    50%, 90% {
-      opacity: 1;
-      transform: scale(1);
-      z-index: 2;
+
+    40% {
+        transform: scale(0);
+        opacity: 0;
     }
-    100% {
-      opacity: 1;
-      transform: scale(0);
-      z-index: 1;
+
+    50%,
+    80% {
+        transform: scale(1);
+        opacity: 1;
     }
   }
 
   // Responsive handling for smaller devices
   @media (max-width: 992px) {
-    .hero-size {
+    .hero-circle {
       height: 450px;
       width: 450px;
+    }
+
+    .hero-size {
+      height: 400px;
+      width: 400px;
+    }
+
+    .developer {
+        bottom: 80px;
+        left: 20px;
+        z-index: 1000;
+    }
+
+    .designer {
+        bottom: -180px;
+        right: 80px;
+        z-index: 1000;
     }
   }
 
   @media (max-width: 576px) {
+
+    .hero-circle {
+      height: 450px;
+      width: 450px;
+    }
+
     .hero-size {
       height: 400px;
       width: 400px;
@@ -138,9 +183,14 @@
   }
 
   @media (max-width: 464px) {
+    .hero-circle {
+      height: 390px;
+      width: 390px;
+    }
+
     .hero-size {
-      height: 350px;
-      width: 350px;
+      height: 330px;
+      width: 330px;
     }
 
     .hero-title {
@@ -149,9 +199,13 @@
   }
 
   @media (max-width: 600px) {
-    .hero-size{
+    .hero-circle {
       height: 300px;
       width: 300px;
+    }
+    .hero-size{
+      height: 280px;
+      width: 280px;
     }
 
     .lol_setup{
@@ -176,9 +230,443 @@
   }
 
   @media (max-width: 347px) {
+    .hero-circle {
+      height: 250px;
+      width: 250px;
+    }
     .hero-size {
       height: 250px;
       width: 250px;
     }
   }
 }
+// media query of designer developer
+
+
+// for animation designer developer
+
+@keyframes translateYInfinite {
+    0% {
+        transform: translateY(0);
+        /* Starting position */
+    }
+
+    50% {
+        transform: translateY(-25px);
+        /* Move up by 50px */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* Return to the starting position */
+    }
+}
+
+@keyframes RotateInfinite {
+    0% {
+        transform: translateY(0);
+        /* Starting position */
+    }
+
+    25% {
+        transform: translateX(20px);
+        /* Move up by 50px */
+    }
+
+    50% {
+        transform: translateY(20px);
+        /* Return to the starting position */
+    }
+
+    75% {
+        transform: translateX(-20px);
+        /* Return to the starting position */
+    }
+
+    100% {
+        transform: translateY(0px);
+        /* Return to the starting position */
+    }
+}
+
+// @media (max-width:930px) and (min-width:0px) {
+//     .developer {
+//         bottom: 80px;
+//         left: 210px;
+//         z-index: 1000;
+//     }
+
+//     .designer {
+//         top: -120px;
+//         right: 80px;
+//         z-index: 1000;
+//     }
+// }
+
+// another one
+
+
+// .bg-hero {
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-color: rgb(235, 241, 250);
+//   border-radius: 30px;
+//   border: 1px solid #EEEEEE;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   .border-circle {
+//     height: 550px;
+//     width: 550px;
+//     border-radius: 50%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+    
+//     .white-circle {
+//       height: 500px;
+//       width: 500px;
+//       background-color: white;
+//       border-radius: 50%;
+//       position: relative;
+
+//       .game1,
+//       .game2,
+//       .lol,
+//       .prankster {
+//         position: absolute;
+//         transform: rotate(-15deg);
+//         animation: zoomTwice 4s linear infinite;
+//       }
+
+//       .game1 {
+//         top: 80px;
+//         left: 40px;
+//         width: 115px;
+//       }
+
+//       .game2 {
+//         bottom: 130px;
+//         right: 30px;
+//         width: 100px;
+//       }
+
+//       .lol {
+//         top: 80px;
+//         left: 40px;
+//         width: 80px;
+//       }
+
+//       .prankster {
+//         bottom: 80px;
+//         right: 50px;
+//         transform: rotate(30deg);
+//         width: 80px;
+//       }
+
+//       .first-div {
+//         animation: firstDivAnimation 8s ease-in-out infinite;
+//         transform: scale(1);
+//         opacity: 1;
+//         animation-delay: 2s;
+//       }
+
+//       .sec-div {
+//       transform: scale(0);
+//       opacity: 0;
+//       animation: secondDivAnimation 8s linear infinite;
+//       animation-delay: 2s;
+//       }
+
+
+//     }
+//   }
+// }
+
+// @keyframes firstDivAnimation {
+//   0% {
+//     transform: scale(1);
+//     opacity: 1;
+//   }
+
+//   30% {
+//     transform: scale(1);
+//     opacity: 1;
+//   }
+
+//   40%, 90% {
+//     transform: scale(0);
+//     opacity: 0;
+//   }
+// }
+
+// @keyframes secondDivAnimation {
+
+//     90%,
+//     0% {
+//         transform: scale(0);
+//         opacity: 0;
+//     }
+
+//     40% {
+//         transform: scale(0);
+//         opacity: 0;
+//     }
+
+//     50%,
+//     80% {
+//         transform: scale(1);
+//         opacity: 1;
+//     }
+// }
+
+// @keyframes zoomTwice {
+//     0%, 100% {
+//       transform: scale(1);
+//     }
+//     20% {
+//       transform: scale(1.15);
+//     }
+//     40% {
+//       transform: scale(0.9);
+//     }
+//     60% {
+//       transform: scale(1.2);
+//     }
+//     80% {
+//       transform: scale(0.95);
+//     }
+//   }
+  
+
+//   @media (max-width:1350px) and (min-width:1199px) {
+//     .white-circle {
+//         height: 450px;
+//         width: 450px;
+//     }
+
+//     .border-circle {
+//         height: 550px;
+//         width: 550px;
+//     }
+//     .image-box-reverse{
+//         transform: translateX(-170px);
+//     }
+// }
+
+// @media (max-width:1440px) and (min-width:1080px) {
+//     .white-box{
+//         position: absolute;
+//         top: 180px;
+//         width: 75%;
+    
+//         .white-mini{
+//             width: 70%;
+//         }
+//     }
+    
+//     .blue-box{
+//         position: absolute;
+//         width: 29%;
+//         top: 250px;
+//         right: 80px;
+//     }
+
+//     .contact-title{
+//         align-items: start;
+//     }
+// }
+
+// @media (min-width:1441px) {
+//     .white-box{
+//         position: absolute;
+//         top: 180px;
+//         width: 75%;
+    
+//         .white-mini{
+//             width: 60%;
+//         }
+//     }
+    
+//     .blue-box{
+//         position: absolute;
+//         width: 29%;
+//         top: 250px;
+//         right: 80px;
+//     }
+
+//     .contact-title{
+//         align-items: start;
+//     }
+// }
+
+
+
+// @media (max-width:1198px) and (min-width:849px) {
+//     .white-circle {
+//         height: 390px;
+//         width: 390px;
+//     }
+
+//     .border-circle {
+//         height: 480px;
+//         width: 480px;
+//     }
+
+//     .game1 {
+//         width: 100px;
+//         top: 85px;
+//         left: 20px;
+//     }
+
+//     .game2 {
+//         width: 100px;
+//         bottom: 85px;
+//         right: 20px;
+//     }
+
+//     .lol {
+//         width: 60px;
+//         top: 85px;
+//         left: 40px;
+//     }
+
+//     .prankster {
+//         width: 60px;
+//         bottom: 85px;
+//         right: 50px;
+//     }
+
+//     .image-box-reverse{
+//         transform: translateX(-270px);
+//     }
+// }
+
+// @media (max-width:850px) and (min-width:605px) {
+//     .fixed-button {
+//         left: 40%;
+//     }
+
+//     .hero-title {
+//         font-size: 45px;
+//     }
+
+//     .white-circle {
+//         height: 390px;
+//         width: 390px;
+//     }
+
+//     .border-circle {
+//         height: 480px;
+//         width: 480px;
+//     }
+
+//     .game1 {
+//         top: 80px;
+//         left: 40px;
+//         width: 90px;
+//     }
+
+//     .game2 {
+//         bottom: 80px;
+//         right: 40px;
+//         width: 90px;
+//     }
+
+//     .lol {
+//         top: 60px;
+//         left: 60px;
+//         width: 70px;
+//     }
+
+//     .prankster {
+//         bottom: 80px;
+//         right: 50px;
+//         width: 70px;
+//     }
+// }
+
+// @media (max-width:604px) and (min-width:450px) {
+//     .fixed-button {
+//         left: 35%;
+//     }
+
+//     .hero-title {
+//         font-size: 30px;
+//     }
+
+//     .white-circle {
+//         height: 340px;
+//         width: 340px;
+//     }
+
+//     .border-circle {
+//         height: 410px;
+//         width: 410px;
+//     }
+
+//     .game1 {
+//         top: 60px;
+//         left: 30px;
+//         width: 80px;
+//     }
+
+//     .game2 {
+//         bottom: 60px;
+//         right: 30px;
+//         width: 80px;
+//     }
+
+//     .lol {
+//         top: 60px;
+//         left: 30px;
+//         width: 80px;
+//     }
+
+//     .prankster {
+//         bottom: 60px;
+//         right: 30px;
+//         width: 80px;
+//     }
+// }
+
+// @media (max-width:449px) and (min-width:390px) {
+//     .fixed-button {
+//         left: 30%;
+//     }
+
+//     .hero-title {
+//         font-size: 35px;
+//     }
+
+//     .white-circle {
+//         height: 280px;
+//         width: 280px;
+//     }
+
+//     .border-circle {
+//         height: 350px;
+//         width: 350px;
+//     }
+// }
+
+// @media (max-width:389px) and (min-width:0px) {
+//     .fixed-button {
+//         left: 25%;
+//     }
+
+//     .hero-title {
+//         font-size: 30px;
+//     }
+
+//     .white-circle {
+//         height: 260px;
+//         width: 260px;
+//     }
+
+//     .border-circle {
+//         height: 300px;
+//         width: 300px;
+//     }
+// }
